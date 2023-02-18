@@ -5,7 +5,6 @@ import com.serviceworker.jwt.JwtTokenUtil;
 import com.serviceworker.model.User;
 import com.serviceworker.repository.UserRepository;
 import com.serviceworker.service.UserService;
-import com.serviceworker.serviceImpl.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
