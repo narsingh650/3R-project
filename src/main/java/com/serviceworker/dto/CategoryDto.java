@@ -1,13 +1,8 @@
 package com.serviceworker.dto;
 
 public class CategoryDto {
-
     private Long id;
-
     private String name;
-
-//    private List<JobDto>jobs;
-
 
     public String getName() {
         return name;
@@ -25,11 +20,5 @@ public class CategoryDto {
         this.id = id;
     }
 
-//    public List<JobDto> getJobs() {
-//        return jobs;
-//    }
-//
-//    public void setJobs(List<JobDto> jobs) {
-//        this.jobs = jobs;
-//    }
+
 }

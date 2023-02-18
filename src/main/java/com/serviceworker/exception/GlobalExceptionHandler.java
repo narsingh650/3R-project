@@ -28,6 +28,16 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<ErrorDetails>(errorDetails, HttpStatus.NOT_FOUND);
     }
 
+
+    @ExceptionHandler(DoValidationException.class)
+    private ResponseEntity<ErrorDetails> handleResourceNotFoundException(DoValidationException exception,
+                                                                         WebRequest webRequest) {
+        // whole webrequest description is not sent, hence set to false
+        ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage(),
+                webRequest.getDescription(false));
+        return new ResponseEntity<ErrorDetails>(errorDetails, HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(Exception.class)
     // handle global exception
     public ResponseEntity<ErrorDetails> hanldeGlobalException(Exception exception, WebRequest webRequest) {

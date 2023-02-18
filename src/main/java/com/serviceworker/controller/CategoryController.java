@@ -27,4 +27,5 @@ public class CategoryController {
       List<CategoryDto> findAll =  categoryService.getAllCategory();
         return new ResponseEntity<List<CategoryDto>>(findAll,HttpStatus.OK);
     }
+
 }

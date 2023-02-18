@@ -1,9 +1,8 @@
 package com.serviceworker.service;
 
-import com.serviceworker.model.User;
+import com.serviceworker.dto.LogInResponse;
 
 public interface UserService {
-    User signUpUser(User user);
-
+    LogInResponse signUpUser(LogInResponse response);
 
 }
